@@ -1,0 +1,26 @@
+1. Use /bin/sh to execute Flag.pdf
+2. Type [$ file flag] and find that it is an ar archive file
+3. [$ ar -p flag > flag1]
+4. Type [$ file flag1] and find that it is a cpio archive file
+5. [$ cpio -i < flag1]
+6. Type [$ file flag] and find that it is a bzip2 archive file
+7. [$ bzip2 -d flag]
+8. Type [$ file flag.out] and find that it is a gzip archive file
+9. [$ mv flag.out flag.gz] since my gzip did not recognize .out suffix
+10. [$ gzip -d flag.gz]
+11. Type [$ file flag] and find that it is a lzip archive file
+12. [$ lzip -d flag]
+13. Type [$ file flag.out] and find that it is an LZ4 archive file
+14. [$ lz4 -d flag.out flag]
+15. Type [$ file flag] and find that it is an LZMA archive file
+16. [$ mv flag flag.xz] since my lzma only recognizes .xz suffix
+17. [$ lzma -d flag.xz]
+18. Type [$ file flag] and find that it is a lzop archive file
+19. [$ lzop -d -o flag2 flag]
+20. Type [$ file flag2] and find that it is a lzip archive file
+21. [$ lzip -d flag2]
+22. Type [$ file flag2.out] and find that it is an XZ archive file
+23. [$ mv flag2.out flag2.xz]
+24. [$ xz -d flag2.xz]
+25. Type [$ file flag2] and find that it is finally a text file
+26. [$ cat flag2 | xxd -p -r]

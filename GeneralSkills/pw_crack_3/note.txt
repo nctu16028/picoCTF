@@ -1,0 +1,4 @@
+To check the correct hash value:
+$ bvi level3.hash.bin
+
+(enter ":q" to quit)

@@ -1,0 +1,7 @@
+Chosen ciphertext attack
+
+Our goal is c^d mod n, but the oracle won't give us.
+Instead, by querying cx^e for some x that is comprime to n, we get:
+(cx^e)^d mod n = (c^d)(x^ed) mod n
+               = (c^d)x mod n
+Finally, multiply it by inverse(x, n) and get c^d mod n
